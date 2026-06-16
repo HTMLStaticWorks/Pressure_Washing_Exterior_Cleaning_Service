@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <title>About Us | CleanFlow Exterior Solutions</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir') || 'ltr';
+            document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+              <g transform="translate(0, 5)">
+                <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+              <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+              <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+            </svg>
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Home2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+
+            <a href="login.html" class="icon-btn" title="Profile">
+                <i class="fas fa-user"></i>
+            </a>
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">
+                <i class="fas fa-right-left"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: var(--bg-alt); text-align: center; padding: 80px 5%;">
+            <div class="container">
+                <h1 class="section-title">Our Story &amp; Values</h1>
+                <p style="max-width: 700px; margin: 0 auto;">We started with a simple belief: every home and business deserves a professional, stress-free exterior clean that restores its value and shine.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="card-grid">
+                    <!-- Mission -->
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-bullseye fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Mission</h3>
+                            <p>To provide safe, reliable, and high-converting soft wash and pressure washing services, prioritizing property safety and green cleaning.</p>
+                        </div>
+                    </div>
+                    <!-- Vision -->
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-eye fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Vision</h3>
+                            <p>To be the premier local exterior cleaning company known for quality work, transparent pricing, and stellar customer service.</p>
+                        </div>
+                    </div>
+                    <!-- Values -->
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-leaf fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Eco-Safety</h3>
+                            <p>Committed to protecting residential landscaping and local ecosystems by using fully biodegradable cleansers and plant-protecting pre-rinses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-story" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <div class="card-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+                    <div style="order: 2;">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" alt="CleanFlow Crew Cleaning" style="height: 400px; width: 100%; object-fit: cover;">
+                    </div>
+                    <div style="order: 1;">
+                        <h2 class="section-title">The CleanFlow Story</h2>
+                        <p>Founded in 2020 by a team of passionate exterior restoration experts, CleanFlow Exterior Solutions has grown from a single mobile cleaning rig to a leading local fleet. We blend the best in hot-water pressure wash systems with specialized soft washing methods to deliver immaculate results without the damage risk.</p>
+                        <p style="margin-top: 20px;">Today, we proudly serve over 5,000 happy residential and commercial clients, cleaning roofs, siding, driveways, decks, and gutters with prompt, friendly, fully insured service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Detail -->
+        <section id="detailed-mission">
+            <div class="container">
+                <div class="card-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+                    <div>
+                        <h2 class="section-title">Our Environmental Commitment</h2>
+                        <p>At CleanFlow, we care about the environment as much as we care about cleanliness. Traditional pressure washing companies often spray harsh, toxic chemicals that run off into soils and damage plant beds. We do things differently.</p>
+                        <p style="margin-top: 20px;">Every technician is trained in our strict Plant Protection Protocol. We pre-saturate all landscaping with fresh water to prevent chemical absorption, apply only mild biodegradable soaps, and perform thorough post-treatment rinses. Your grass, shrubs, pets, and children stay safe.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Beautiful Clean Yard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-choose-us" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">Why Choose CleanFlow?</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-shield-halved fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Fully Insured</h3>
+                            <p>Comprehensive multi-million dollar general liability protection for ultimate peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-thumbs-up fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Spotless Guarantee</h3>
+                            <p>We stand behind our work. If you notice any streaks or missed areas, we'll return and fix it free.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-truck-ramp-box fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Commercial Gear</h3>
+                            <p>We use trailer-mounted hot-water washers and soft-wash pumps, not standard consumer hardware.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fas fa-user-tie fa-3x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                            <h3>Certified Technicians</h3>
+                            <p>Our cleaning crews are drug-tested, background-checked, and extensively trained in safety standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Timeline -->
+        <section id="our-journey-timeline">
+            <div class="container">
+                <h2 class="section-title text-center">Our Journey</h2>
+                <div class="journey-track" role="list">
+                    <article class="journey-row" role="listitem">
+                        <div class="journey-row__meta">
+                            <span class="journey-year-badge">2020</span>
+                        </div>
+                        <div class="journey-row__body">
+                            <h3>A Single Rig Start</h3>
+                            <p>CleanFlow was founded with a single high-pressure washing trailer, cleaning neighborhood driveways and fences.</p>
+                        </div>
+                    </article>
+                    <article class="journey-row" role="listitem">
+                        <div class="journey-row__meta">
+                            <span class="journey-year-badge">2022</span>
+                        </div>
+                        <div class="journey-row__body">
+                            <h3>Adopting Soft Wash</h3>
+                            <p>We invested in specialized low-pressure soft washing pumps, expanding safely into shingle roof and siding cleaning.</p>
+                        </div>
+                    </article>
+                    <article class="journey-row" role="listitem">
+                        <div class="journey-row__meta">
+                            <span class="journey-year-badge">2024</span>
+                        </div>
+                        <div class="journey-row__body">
+                            <h3>Commercial Expansion</h3>
+                            <p>We added hot-water industrial washers, signing maintenance cleaning agreements with major local restaurants and HOAs.</p>
+                        </div>
+                    </article>
+                    <article class="journey-row" role="listitem">
+                        <div class="journey-row__meta">
+                            <span class="journey-year-badge journey-year-badge--today">TODAY</span>
+                        </div>
+                        <div class="journey-row__body">
+                            <h3>Local Cleaning Leader</h3>
+                            <p>Serving residential and commercial properties with a state-of-the-art fleet and custom client dashboard portal.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="our-team" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">Meet Our Restoration Experts</h2>
+                <div class="card-grid card-grid--three">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" width="800" height="1000" loading="lazy"
+                            alt="Portrait of David Green, Founder and Lead Inspector">
+                        <div class="card-content">
+                            <h3>David Green</h3>
+                            <p style="color: var(--secondary); font-weight: 600;">Founder &amp; Lead Inspector</p>
+                            <p>12 years of structural cleaning experience. Inspects every residential site to ensure safety guidelines are met.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" width="800" height="1000" loading="lazy"
+                            alt="Portrait of Elena Moss, Customer Experience Director">
+                        <div class="card-content">
+                            <h3>Elena Moss</h3>
+                            <p style="color: var(--secondary); font-weight: 600;">Customer Experience Director</p>
+                            <p>Organizes scheduling, responsive online estimate bookings, and handles our customer satisfaction guarantee.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" width="800" height="1000" loading="lazy"
+                            alt="Portrait of Marcus Tech, Lead Fleet Engineer">
+                        <div class="card-content">
+                            <h3>Marcus Tech</h3>
+                            <p style="color: var(--secondary); font-weight: 600;">Lead Fleet Engineer</p>
+                            <p>Ensures that our hot-water heaters, pressure hoses, and soft washing pumps are calibrated to safety limits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center; justify-content: flex-start; margin-bottom: 15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+                          <g transform="translate(0, 5)">
+                            <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                            <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+                          </g>
+                          <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+                          <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+                        </svg>
+                    </a>
+                    <p style="margin-bottom: 20px;">Premium exterior cleaning services. Restore. Protect. Impress.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link" title="X" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#faq-section">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@cleanflowsolutions.com</p>
+                    <p><i class="fas fa-phone" style="margin-right: 8px;"></i>+1 (800) 555-0199</p>
+                    <p><i class="fas fa-location-dot" style="margin-right: 8px;"></i>123 Clean Way, Suite 100</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.85rem;">
+                <p>&copy; 2026 CleanFlow Exterior Solutions. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

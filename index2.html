@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <title>CleanFlow Premium | State-of-the-Art Exterior Cleaning Solutions</title>
+    <meta name="description" content="CleanFlow Premium offers premium soft washing and pressure washing services. Experience state-of-the-art cleaning.">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir') || 'ltr';
+            document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
+    <style>
+        .split-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            min-height: 90vh;
+            padding: 0 5%;
+            gap: 50px;
+        }
+
+        .split-hero::before {
+            display: none;
+        }
+
+        .split-hero .hero-content {
+            text-align: left;
+            color: var(--text);
+            max-width: 600px;
+        }
+
+        [dir="rtl"] .split-hero .hero-content {
+            text-align: right;
+        }
+
+        .split-hero .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 60px 5%;
+            border-radius: var(--radius);
+        }
+
+        .stat-item h2 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .why-hydro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-hydro-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: 14px;
+        }
+
+        .why-hydro-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: block;
+        }
+
+        .why-hydro-images img:first-child {
+            grid-row: span 2;
+            height: 100%;
+        }
+
+        .why-hydro-content h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .why-hydro-content .section-lead {
+            color: var(--text-muted, #888);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .why-feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .why-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .why-feature-icon {
+            flex-shrink: 0;
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: var(--secondary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .why-feature-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+
+        .why-feature-body p {
+            font-size: 0.9rem;
+            color: var(--text-muted, #888);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .split-hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .split-hero .hero-content {
+                text-align: center;
+                margin: 0 auto;
+                order: 1;
+            }
+
+            .split-hero .hero-image {
+                order: 2;
+            }
+
+            .why-hydro {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-hydro-images {
+                grid-template-rows: 160px 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+              <g transform="translate(0, 5)">
+                <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+              <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+              <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+            </svg>
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Home2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+
+            <a href="login.html" class="icon-btn" title="Profile">
+                <i class="fas fa-user"></i>
+            </a>
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">
+                <i class="fas fa-right-left"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Premium Split Hero -->
+        <section class="split-hero">
+            <div class="hero-content">
+                <h1>Restore. Protect. <span style="color: var(--secondary);">Impress.</span></h1>
+                <p>Advanced hot-water pressure washing and soft washing systems designed for maximum cleaning efficiency. Bring back the original shine of your home or business.</p>
+                <div class="hero-btns" style="justify-content: flex-start;">
+                    <a href="contact.html" class="btn btn-primary">Get Free Estimate</a>
+                    <a href="#see-it-in-action" class="btn btn-secondary">See It In Action</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Beautiful Clean House">
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section>
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h2>5,000+</h2>
+                        <p>Properties Washed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>10+ Years</h2>
+                        <p>In Business</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>100%</h2>
+                        <p>Satisfaction Guarantee</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>24/7</h2>
+                        <p>Online Quote Booking</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Soft Washing? -->
+        <section id="why-soft-wash" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <div class="why-hydro">
+                    <!-- Mosaic Image Grid -->
+                    <div class="why-hydro-images">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Pressure Washing Splashing" loading="lazy">
+                        <img src="https://t3.ftcdn.net/jpg/03/94/60/36/360_F_394603682_5aeyxbj9FBPt7JFVnVKXHDfnkYQnyogt.jpg" alt="Roof Cleaning Shingles" loading="lazy">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2bFCsnkIsKC_ceHyPe3St2vJEwPwI2PB52cbRWwZg7YDVGpmFcGVAWI&s=10" alt="Deck Washing wood restoration" loading="lazy">
+                    </div>
+
+                    <!-- Feature List -->
+                    <div class="why-hydro-content">
+                        <h2>Why <span style="color: var(--secondary);">Soft Washing?</span></h2>
+                        <p class="section-lead">Soft washing isn't just low pressure — it's a smarter, safer, and longer-lasting way to clean delicate siding and shingle roofs. Here's why thousands of homeowners trust it.</p>
+
+                        <div class="why-feature-list">
+                            <div class="why-feature-item">
+                                <div class="why-feature-icon"><i class="fas fa-shield-halved"></i></div>
+                                <div class="why-feature-body">
+                                    <h4>No Damage Guarantee</h4>
+                                    <p>Low pressure (under 100 PSI) prevents structural damage to asphalt shingles, stucco, and wood trim.</p>
+                                </div>
+                            </div>
+                            <div class="why-feature-item">
+                                <div class="why-feature-icon"><i class="fas fa-bolt"></i></div>
+                                <div class="why-feature-body">
+                                    <h4>Kills Organic Growth</h4>
+                                    <p>Our solutions target and destroy the root of mold, moss, mildew, and black algae, not just clean the surface.</p>
+                                </div>
+                            </div>
+                            <div class="why-feature-item">
+                                <div class="why-feature-icon"><i class="fas fa-droplet"></i></div>
+                                <div class="why-feature-body">
+                                    <h4>Uses 70% Less Water</h4>
+                                    <p>Because the soap does the hard work, we require much less water volume to get a perfect finish.</p>
+                                </div>
+                            </div>
+                            <div class="why-feature-item">
+                                <div class="why-feature-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="why-feature-body">
+                                    <h4>Biodegradable Soaps</h4>
+                                    <p>Our solutions break down harmlessly without affecting gardens, soils, children, or household pets.</p>
+                                </div>
+                            </div>
+                            <div class="why-feature-item">
+                                <div class="why-feature-icon"><i class="fas fa-clock"></i></div>
+                                <div class="why-feature-body">
+                                    <h4>3x Longer Lasting</h4>
+                                    <p>Because the organic spores are chemically neutralized, algae returns much slower than with high-pressure water alone.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Products Grid -->
+        <section>
+            <div class="container">
+                <h2 class="section-title text-center">Premium Cleaning Service Packages</h2>
+                <div class="card-grid card-grid--three">
+                    <!-- Product 1 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="House Washing">
+                        <div class="card-content">
+                            <h3>Full House Soft Wash</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">From $299.00</p>
+                            <p>Low-pressure wash for vinyl, siding, stucco, brick or wood. Removes organic grime safely.</p>
+                            <div class="product-card-actions">
+                                <a href="products.html" class="btn btn-primary">Book Package</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card">
+                        <img src="https://wilkinsenterprises.info/img/IMG_0561.jpg" alt="Roof Wash">
+                        <div class="card-content">
+                            <h3>Non-Pressure Roof Wash</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">From $399.00</p>
+                            <p>Safe shingle soft washing removes black stains, mold, lichen, and restores shingle colors.</p>
+                            <div class="product-card-actions">
+                                <a href="products.html" class="btn btn-primary">Book Package</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Driveway Wash">
+                        <div class="card-content">
+                            <h3>Driveway &amp; Sidewalk Blast</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">From $149.00</p>
+                            <p>High-pressure rotary concrete cleaning with post-treatment protection to keep it white.</p>
+                            <div class="product-card-actions">
+                                <a href="products.html" class="btn btn-primary">Book Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="see-it-in-action" style="background-color: var(--bg-alt); text-align: center;">
+            <div class="container">
+                <h2 class="section-title">See Our Crew in Action</h2>
+                <div class="video-poster-tile">
+                    <img class="video-poster-img"
+                        src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&h=500"
+                        alt="Driveway Cleaning Preview" width="900" height="500" loading="lazy">
+                    <button type="button" class="video-poster-play" aria-label="Play video: How Soft Washing Works">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                    <p class="video-poster-caption">Watch: How Our High-Flow Commercial Wash Works</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium CTA -->
+        <section class="section-cta-band"
+            style="background: linear-gradient(135deg, var(--primary), var(--bg-dark)); color: white;">
+            <div class="container">
+                <h2 style="color: white;">Upgrade Your Property's Curb Appeal</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9;">Book custom exterior maintenance plans for residential homes and commercial plazas.</p>
+                <a href="contact.html" class="btn btn-primary btn-primary-on-dark">Get Free Estimate</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center; justify-content: flex-start; margin-bottom: 15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+                          <g transform="translate(0, 5)">
+                            <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                            <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+                          </g>
+                          <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+                          <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+                        </svg>
+                    </a>
+                    <p style="margin-bottom: 20px;">Premium exterior cleaning services. Restore. Protect. Impress.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link" title="X" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#faq-section">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@cleanflowsolutions.com</p>
+                    <p><i class="fas fa-phone" style="margin-right: 8px;"></i>+1 (800) 555-0199</p>
+                    <p><i class="fas fa-location-dot" style="margin-right: 8px;"></i>123 Clean Way, Suite 100</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.85rem;">
+                <p>&copy; 2026 CleanFlow Exterior Solutions. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

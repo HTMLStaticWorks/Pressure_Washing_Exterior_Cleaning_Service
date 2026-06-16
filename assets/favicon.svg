@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Rounded container in brand primary color -->
+  <rect width="32" height="32" rx="7" fill="#0A84FF"/>
+  <!-- House outline in white -->
+  <path d="M 8,22 L 8,15 L 16,9 L 24,15 L 24,22 Z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Water droplet in secondary color -->
+  <path d="M 16,7 C 16,7 21,13 21,17 C 21,20 18.7,22.5 16,22.5 C 13.3,22.5 11,20 11,17 C 11,13 16,7 16,7 Z" fill="#00C2A8" opacity="0.9"/>
+  <!-- Spray effect in white -->
+  <path d="M 23,10 C 25,12 25,15 23,17" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

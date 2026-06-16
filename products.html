@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <title>Services &amp; Packages | CleanFlow Exterior Solutions</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir') || 'ltr';
+            document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
+    <style>
+        @media (max-width: 768px) {
+            #featured-product .card-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                text-align: center;
+            }
+            
+            #featured-product .card-grid > div:first-child {
+                order: 2;
+            }
+            
+            #featured-product .card-grid > div:last-child {
+                order: 1;
+            }
+            
+            #featured-product .btn {
+                display: block;
+                margin: 20px auto 0 !important;
+                text-align: center;
+            }
+            
+            #product-categories .card-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            #featured-product .card-grid {
+                gap: 40px !important;
+            }
+            
+            #featured-product .btn {
+                display: block;
+                margin: 20px auto 0 !important;
+                text-align: center;
+            }
+            
+            #product-categories .card-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 25px !important;
+            }
+        }
+
+        #product-categories .category-card-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+
+        #product-categories .card {
+            overflow: hidden;
+            padding: 0;
+        }
+
+        #product-categories .card .card-content {
+            padding: 16px;
+            text-align: center;
+        }
+
+        #product-categories .card h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+              <g transform="translate(0, 5)">
+                <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+              <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+              <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+            </svg>
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Home2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+
+            <a href="login.html" class="icon-btn" title="Profile">
+                <i class="fas fa-user"></i>
+            </a>
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">
+                <i class="fas fa-right-left"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: var(--bg-alt); text-align: center; padding: 60px 5%;">
+            <div class="container">
+                <h1 class="section-title">Services &amp; Pricing Packages</h1>
+                <p>Select from our range of professional exterior cleaning services and book online today.</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section>
+            <div class="container">
+                <div class="card-grid card-grid--three">
+                    <!-- Product 1 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="House Wash">
+                        <div class="card-content">
+                            <h3>Full House Soft Wash</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">$299.00</p>
+                            <p>Low-pressure wash for vinyl, siding, stucco, brick or wood. Removes organic grime safely.</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrtxi9Ge_2j6BkImFtGewfeL0_xXwj7hBcu02CdVjB_h4MRSM3p7dqukFM&s=10" alt="Roof Clean">
+                        <div class="card-content">
+                            <h3>Non-Pressure Roof Wash</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">$399.00</p>
+                            <p>Safe shingle soft washing removes black stains, mold, lichen, and restores shingle colors.</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card">
+                        <img src="https://pro-blasting.com/wp-content/uploads/2024/03/PRO-BLAST-Blast-BEFOREBEFOREBEFOREBEFOREBEFOREDRIVEWAYDRIVEWAYDROVEWAY-scaled.jpg" alt="Driveway Clean">
+                        <div class="card-content">
+                            <h3>Driveway &amp; Walkway Blast</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">$149.00</p>
+                            <p>High-pressure rotary concrete cleaning with post-treatment protection to keep it white.</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusiSFACkqj028h55h4vrsVC9yPd5U2Zv3ut_F7urP3A2rBjRMkXBINVTn&s=10" alt="Patio Clean">
+                        <div class="card-content">
+                            <h3>Deck &amp; Patio Restoration</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">$249.00</p>
+                            <p>Cleans greyed wood and composites of mold, dirt and grease, preparing them for staining.</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx2RyM5uJlGavSmfG9BRwC9u9ps2zAAQpCBtwEntzGh1CTsBzG_KqVPa4a&s=10" alt="Fence Wash">
+                        <div class="card-content">
+                            <h3>Fence Washing Package</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">$179.00</p>
+                            <p>Restores brightness to vinyl, wood, or aluminum fences by sanitizing dirt and algae buildup.</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="card">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5fceb410bdad840e6a397cfe/fa5bc19a-2c0d-4f55-957b-a5cc492c20bb/power+washing+company.jpg" alt="Gutter Wash">
+                        <div class="card-content">
+                            <h3>Gutter Brightening Wash</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">$129.00</p>
+                            <p>Clears gutter blockages and scrubs oxidation streaks off gutter exteriors to make them look new.</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Product Section -->
+        <section id="featured-product" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <div class="card-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
+                    <div>
+                        <span style="background-color: var(--secondary); color: var(--bg-dark); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Best Value</span>
+                        <h2 style="margin-top: 15px;" class="section-title">The Premium Curb Appeal Package</h2>
+                        <p>Our most complete residential package. Get a full-house soft wash, high-pressure concrete driveway wash, and exterior gutter brightening bundled together. Clean your home from top to bottom and save!</p>
+                        <div style="margin-top: 30px;">
+                            <p class="featured-product-price" style="font-size: 1.5rem; font-weight: 800;"><span class="featured-price-current">$499.00</span> <span class="featured-price-was" style="font-size: 1rem; text-decoration: line-through;">$599.00</span></p>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Book Bundle</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Full House Curb Appeal">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories Section -->
+        <section id="product-categories">
+            <div class="container">
+                <h2 class="section-title text-center">Browse by Service Category</h2>
+                <div class="card-grid" style="grid-template-columns: repeat(4, minmax(150px, 1fr));">
+                    <div class="card">
+                        <img class="category-card-img"
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80"
+                            alt="Soft Wash Siding" loading="lazy">
+                        <div class="card-content">
+                            <h4>House Softwash</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="category-card-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGca0QBe_cOxi_x4ORMotam_eRVLDCtgWjtYyY9W3YmKwkUsgtVgYoxlE&s=10"
+                            alt="Roof Cleaning" loading="lazy">
+                        <div class="card-content">
+                            <h4>Roof Care</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="category-card-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPL0ILqaWka4M_FAeRa-tbnDqwyNrSPCmXFkRy4fWn72i06p5FFoKULAg&s=10"
+                            alt="Concrete Cleaning" loading="lazy">
+                        <div class="card-content">
+                            <h4>Concrete Washing</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="category-card-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufoe5vDvJZ2lwjW-SGEghfdtJFixkjArOhXA7SpgSauZiXnVZxBwMNEPh&s=10"
+                            alt="Wood Deck Restore" loading="lazy">
+                        <div class="card-content">
+                            <h4>Wood &amp; Deck</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section id="best-sellers" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">Top Selling Add-ons</h2>
+                <div class="card-grid card-grid--three">
+                    <div class="card" style="position: relative;">
+                        <span style="position: absolute; top: 10px; right: 10px; background: #EF4444; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">POPULAR</span>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-qAiuWBl2ZTEWygQBTES20OghvFVseb7z3R7iSZnAU1I6_7lkVUUV8iY&s=10" alt="Gutter Clean">
+                        <div class="card-content">
+                            <h3>In/Out Gutter Cleanout</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem; margin: 0;">$99.99</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-secondary">Add to Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiedF8aTQwa6lB36kFnT-YnR34h2WPtwIIANdR_sKQ8-b74TihDXXb5Y&s=10" alt="Rust Stain">
+                        <div class="card-content">
+                            <h3>Rust &amp; Battery Stain Removal</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem; margin: 0;">$89.99</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-secondary">Add to Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://i0.wp.com/www.soft-lite.com/wp-content/uploads/2022/10/WindowCleaning_outsidehome.jpeg?fit=1200%2C500&ssl=1" alt="Window Wash">
+                        <div class="card-content">
+                            <h3>Exterior Window Cleaning</h3>
+                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem; margin: 0;">$129.99</p>
+                            <div class="product-card-actions">
+                                <a href="contact.html" class="btn btn-secondary">Add to Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="customer-reviews">
+            <div class="container">
+                <h2 class="section-title text-center">What Property Owners Say</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-content" style="text-align: left;">
+                            <div style="color: #FBBF24; margin-bottom: 10px;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"The Curb Appeal package was worth every penny. Our home looks brand new and the driveway oil stains are completely gone!"</p>
+                            <p style="margin-top: 15px; font-weight: 700;">— Sarah Jenkins</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content" style="text-align: left;">
+                            <div style="color: #FBBF24; margin-bottom: 10px;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Easy booking and prompt service. The crew washed the house siding and vinyl fence cleanly. Will definitely book again next spring."</p>
+                            <p style="margin-top: 15px; font-weight: 700;">— Tom Rivera</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center; justify-content: flex-start; margin-bottom: 15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+                          <g transform="translate(0, 5)">
+                            <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                            <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+                          </g>
+                          <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+                          <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+                        </svg>
+                    </a>
+                    <p style="margin-bottom: 20px;">Premium exterior cleaning services. Restore. Protect. Impress.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link" title="X" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#faq-section">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@cleanflowsolutions.com</p>
+                    <p><i class="fas fa-phone" style="margin-right: 8px;"></i>+1 (800) 555-0199</p>
+                    <p><i class="fas fa-location-dot" style="margin-right: 8px;"></i>123 Clean Way, Suite 100</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.85rem;">
+                <p>&copy; 2026 CleanFlow Exterior Solutions. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

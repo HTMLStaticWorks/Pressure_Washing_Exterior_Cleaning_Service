@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <title>CleanFlow Exterior Solutions | Premium Pressure Washing Services</title>
+    <meta name="description"
+        content="Professional pressure washing and soft wash exterior cleaning services for residential and commercial properties. Restore, Protect, Impress.">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+            var d = localStorage.getItem('dir') || 'ltr';
+            document.documentElement.setAttribute('dir', d);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+              <g transform="translate(0, 5)">
+                <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+              </g>
+              <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+              <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+            </svg>
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Home2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+
+            <a href="login.html" class="icon-btn" title="Profile">
+                <i class="fas fa-user"></i>
+            </a>
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">
+                <i class="fas fa-right-left"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" type="button">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1600&q=80');">
+            <div class="hero-content">
+                <h1 class="text-center">Bring Back the Original Beauty of Your Property</h1>
+                <p class="text-center">Professional pressure washing and exterior cleaning services that instantly improve curb appeal and protect your investment.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">Get Free Estimate</a>
+                    <a href="products.html" class="btn btn-secondary">View Services</a>
+                </div>
+
+                <!-- Interactive Before/After Visual Comparison -->
+                <div class="ba-slider">
+                    <!-- Before Image (Dirty) -->
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Dirty Driveway (Before)">
+                    
+                    <!-- After Image (Clean) -->
+                    <div class="resize">
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80" alt="Clean Driveway (After)">
+                    </div>
+                    
+                    <span class="handle"></span>
+                    <input type="range" min="0" max="100" value="50" aria-label="Before/After image slider">
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="trust-bar-container">
+                <div class="trust-item">
+                    <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                    <div>
+                        <h4>Fully Licensed</h4>
+                        <p>&amp; 100% Insured</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-award" aria-hidden="true"></i>
+                    <div>
+                        <h4>10+ Years</h4>
+                        <p>Industry Experience</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-circle-check" aria-hidden="true"></i>
+                    <div>
+                        <h4>5,000+ Projects</h4>
+                        <p>Completed Successfully</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star" style="color: var(--accent);" aria-hidden="true"></i>
+                    <div>
+                        <h4>4.9 Rating</h4>
+                        <p>Based on Customer Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services-section">
+            <div class="container">
+                <h2 class="section-title text-center">Our Core Services</h2>
+                <p class="text-center" style="max-width: 600px; margin: 0 auto 30px;">We use state-of-the-art pressure washing and soft washing equipment to deep-clean and sanitize your home or building safely.</p>
+                <div class="card-grid card-grid--three">
+                    <!-- Service 1 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="House Washing Service" loading="lazy">
+                        <div class="card-content">
+                            <h3>House Washing</h3>
+                            <p>Low-pressure soft washing removes algae, dirt, and mildew from siding without damage.</p>
+                            <a href="products.html" class="btn btn-secondary" style="margin-top: auto;">Request Quote</a>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/id/490080148/photo/roof-cleaning-with-high-pressure.jpg?s=612x612&w=0&k=20&c=5pgWgsxZKkFVltsWK6jlWRvBqA-ZurJYyTz-eXhUKcs=" alt="Roof Cleaning Service" loading="lazy">
+                        <div class="card-content">
+                            <h3>Roof Cleaning</h3>
+                            <p>Safe soft wash treatment destroys roof algae, moss, and dark streaks, extending shingles' lifespan.</p>
+                            <a href="products.html" class="btn btn-secondary" style="margin-top: auto;">Request Quote</a>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Driveway Cleaning Service" loading="lazy">
+                        <div class="card-content">
+                            <h3>Driveway Cleaning</h3>
+                            <p>High-pressure concrete cleaning blasts away deep oil stains, mud, grime, and weeds.</p>
+                            <a href="products.html" class="btn btn-secondary" style="margin-top: auto;">Request Quote</a>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq2KKnUwwnfJ1Jn5YJ0SQjNaMEFSJTUmOtnwgWNIuByD1bPjLUmYvOCDk&s=10" alt="Deck & Patio Cleaning Service" loading="lazy">
+                        <div class="card-content">
+                            <h3>Deck &amp; Patio Cleaning</h3>
+                            <p>Professional wood and composite restoration to restore pristine color to your decks and patios.</p>
+                            <a href="products.html" class="btn btn-secondary" style="margin-top: auto;">Request Quote</a>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Fence Washing Service" loading="lazy">
+                        <div class="card-content">
+                            <h3>Fence Washing</h3>
+                            <p>Clean off years of weathering from wood, vinyl, or metal fences and bring back brightness.</p>
+                            <a href="products.html" class="btn btn-secondary" style="margin-top: auto;">Request Quote</a>
+                        </div>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Cleaning Service" loading="lazy">
+                        <div class="card-content">
+                            <h3>Commercial Cleaning</h3>
+                            <p>Sidewalk, storefront, parking lot, and building facade cleaning for business properties.</p>
+                            <a href="products.html" class="btn btn-secondary" style="margin-top: auto;">Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before & After Gallery -->
+        <section id="gallery-section" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">Before &amp; After Gallery</h2>
+                <p class="text-center" style="max-width: 600px; margin: 0 auto 30px;">See the incredible transformations we achieve for residential and commercial customers.</p>
+                <div class="card-grid card-grid--three">
+                    <!-- Transformation 1 -->
+                    <div class="card">
+                        <div class="ba-slider" style="margin: 0; height: 260px; max-width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?auto=format&fit=crop&w=600&q=80" alt="Driveway Before">
+                            <div class="resize">
+                                <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=600&q=80" alt="Driveway After">
+                            </div>
+                            <span class="handle"></span>
+                            <input type="range" min="0" max="100" value="50" aria-label="Driveway slider">
+                        </div>
+                        <div class="card-content">
+                            <h3>Concrete Driveway</h3>
+                            <p>Removed oil stains, algae, and grime from a residential brick and concrete driveway.</p>
+                        </div>
+                    </div>
+                    <!-- Transformation 2 -->
+                    <div class="card">
+                        <div class="ba-slider" style="margin: 0; height: 260px; max-width: 100%;">
+                            <img src="https://perfectpowerwash.com/wp-content/uploads/2020/01/roof-treatment-yellow-house-ws.jpg" alt="Roof Before">
+                            <div class="resize">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7OQGXnz-rI0XmkBsjZAIUl1uQYlmkUZGgCwf38Bef2Xn-8-lLaostRqpQ&s=10" alt="Roof After">
+                            </div>
+                            <span class="handle"></span>
+                            <input type="range" min="0" max="100" value="50" aria-label="Roof slider">
+                        </div>
+                        <div class="card-content">
+                            <h3>Roof Soft Wash</h3>
+                            <p>Eliminated dark organic staining and moss to make shingles look brand new.</p>
+                        </div>
+                    </div>
+                    <!-- Transformation 3 -->
+                    <div class="card">
+                        <div class="ba-slider" style="margin: 0; height: 260px; max-width: 100%;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSVdDAktRQeVD9DDhGj5UHid_dWLskRht2ETnSefIWxbg4OZf2YG2G-jc&s=10" alt="Deck Before">
+                            <div class="resize">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz9hZIovzAOKZMpJyx-qhwstrDLZI9rtBWB3CS7NdPV_HxoW3ZSFzXhqU&s=10" alt="Deck After">
+                            </div>
+                            <span class="handle"></span>
+                            <input type="range" min="0" max="100" value="50" aria-label="Deck slider">
+                        </div>
+                        <div class="card-content">
+                            <h3>Wood Deck Restore</h3>
+                            <p>Stripped away grey, dead wood fibers and mildew to reveal the natural grain underneath.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Seasonal Promotions -->
+        <section id="promotions">
+            <div class="container">
+                <h2 class="section-title text-center">Seasonal Promotions</h2>
+                <p class="text-center" style="max-width: 600px; margin: 0 auto 30px;">Take advantage of our current bundle discounts and seasonal specials to get premium cleaning for less.</p>
+                <div class="card-grid card-grid--three">
+                    <!-- Promotion 1 -->
+                    <div class="card">
+                        <div class="card-content" style="text-align: center;">
+                            <i class="fas fa-sun fa-3x" style="color: var(--accent); margin-bottom: 15px;"></i>
+                            <span style="background-color: var(--accent); color: var(--text-light); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Limited Time</span>
+                            <h3 style="margin-top: 15px;">Summer Special</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">15% Off House Washing</p>
+                            <p>Clean off spring pollen and dust. Keep your home exterior looking bright all summer long.</p>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Claim Offer</a>
+                        </div>
+                    </div>
+                    <!-- Promotion 2 -->
+                    <div class="card">
+                        <div class="card-content" style="text-align: center;">
+                            <i class="fas fa-spa fa-3x" style="color: var(--secondary); margin-bottom: 15px;"></i>
+                            <span style="background-color: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Most Popular</span>
+                            <h3 style="margin-top: 15px;">Spring Refresh Package</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">Save $75 Instantly</p>
+                            <p>Combine soft-wash house cleaning with full driveway pressure washing for premium curb appeal.</p>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Claim Offer</a>
+                        </div>
+                    </div>
+                    <!-- Promotion 3 -->
+                    <div class="card">
+                        <div class="card-content" style="text-align: center;">
+                            <i class="fas fa-boxes-packing fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                            <span style="background-color: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Best Value</span>
+                            <h3 style="margin-top: 15px;">Bundle Discounts</h3>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">Up to 20% Off</p>
+                            <p>Book House, Roof, and Deck cleaning together. Keep your entire exterior protected and clean.</p>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Claim Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">What Our Clients Say</h2>
+                <div class="card-grid card-grid--three">
+                    <article class="card">
+                        <div class="card-content" style="text-align: left;">
+                            <div style="color: var(--accent); margin-bottom: 10px;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"The team washed our concrete driveway and vinyl fence. The results are amazing! Years of mold and grime disappeared in hours."</p>
+                            <div style="margin-top: 20px; font-weight: 700;">- Sarah Jenkins</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-content" style="text-align: left;">
+                            <div style="color: var(--accent); margin-bottom: 10px;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"CleanFlow soft-washed my shingle roof. Highly recommend their services — they were extremely careful around our flower gardens."</p>
+                            <div style="margin-top: 20px; font-weight: 700;">- Michael Rivera</div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-content" style="text-align: left;">
+                            <div style="color: var(--accent); margin-bottom: 10px;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Excellent commercial building washing service. The facade looks pristine and our clients noticed the difference immediately."</p>
+                            <div style="margin-top: 20px; font-weight: 700;">- Elena Turner</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- FAQ Section -->
+        <section id="faq-section" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">Frequently Asked Questions</h2>
+                <p class="text-center" style="max-width: 600px; margin: 0 auto 30px;">Have questions about pressure washing? Find quick answers to common questions here.</p>
+                
+                <div class="faq-accordion">
+                    <details class="faq-item" open>
+                        <summary>What is the difference between pressure washing and soft washing?</summary>
+                        <div class="faq-content">
+                            <p>Pressure washing uses high-velocity water spray (typically 2000-4000 PSI) to blast away dirt from hard surfaces like concrete. Soft washing uses low pressure combined with specialized, biodegradable cleaning solutions to safely kill mold, algae, and bacteria on delicate surfaces like shingles, stucco, and wood siding.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary>Will pressure washing damage my plants and landscaping?</summary>
+                        <div class="faq-content">
+                            <p>No, we take extreme precautions to protect your gardens. We pre-wet and rinse all plant life before, during, and after the cleaning process, and use safe, eco-friendly, biodegradable solutions that won't harm your grass or landscaping.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary>How often should I clean my house siding and roof?</summary>
+                        <div class="faq-content">
+                            <p>Generally, we recommend having your siding washed once a year to prevent algae and mold buildup. Roof cleaning is typically required every 2 to 3 years depending on local humidity and shade coverage.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary>Do I need to be home while you clean?</summary>
+                        <div class="faq-content">
+                            <p>You do not need to be home for the service! We just ask that you close all windows and doors securely, clear your driveway of vehicles, and ensure your outdoor water spigot is turned on and accessible.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section-cta-band" style="background: linear-gradient(135deg, var(--primary), var(--bg-dark)); color: white; padding: 80px 5%;">
+            <div class="container">
+                <h2 style="color: white;">Ready to Transform Your Property?</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">Get in touch with our team today to request your free, zero-obligation estimate.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary btn-primary-on-dark">Get Free Estimate</a>
+                    <a href="tel:+18005550199" class="btn btn-secondary btn-secondary-on-dark">Call Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="index.html" class="logo" style="width: 180px; height: 50px; display: inline-flex; align-items: center; justify-content: flex-start; margin-bottom: 15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+                          <g transform="translate(0, 5)">
+                            <path d="M 6,28 L 6,18 L 16,10 L 26,18 L 26,28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M 16,8 C 16,8 23,16 23,22 C 23,26 19.8,29 16,29 C 12.2,29 9,26 9,22 C 9,16 16,8 16,8 Z" fill="var(--primary)"/>
+                            <path d="M 28,12 C 30,15 30,19 28,22" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M 32,8 C 35,12 35,22 32,26" fill="none" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"/>
+                          </g>
+                          <text x="42" y="22" font-family="'Poppins', sans-serif" font-weight="600" font-size="15" fill="var(--text)">CleanFlow</text>
+                          <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
+                        </svg>
+                    </a>
+                    <p style="margin-bottom: 20px;">Premium exterior cleaning services. Restore. Protect. Impress.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link" title="X" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#faq-section">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>info@cleanflowsolutions.com</p>
+                    <p><i class="fas fa-phone" style="margin-right: 8px;"></i>+1 (800) 555-0199</p>
+                    <p><i class="fas fa-location-dot" style="margin-right: 8px;"></i>123 Clean Way, Suite 100</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.85rem;">
+                <p>&copy; 2026 CleanFlow Exterior Solutions. All rights reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
