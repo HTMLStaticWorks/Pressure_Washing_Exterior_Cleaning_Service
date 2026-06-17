@@ -61,6 +61,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            direction: ltr !important;
         }
 
         .form-group {
@@ -165,11 +166,18 @@
         .auth-footer a {
             color: var(--primary);
             font-weight: 600;
+            transition: var(--transition);
         }
 
         [data-theme="dark"] .auth-footer a {
             color: var(--secondary);
         }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
         .terms-group {
             display: flex;
             align-items: flex-start;
@@ -186,9 +194,21 @@
         .terms-group a {
             color: var(--primary);
             font-weight: 600;
+            transition: var(--transition);
+        }
+        .terms-group a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
         }
         [data-theme="dark"] .terms-group a {
             color: var(--secondary);
+        }
+        .auth-card .btn {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -220,8 +240,8 @@
                 </svg>
             </a>
 
-            <h2 style="margin-bottom: 0.35rem; font-size: 1.35rem;">Create an Account</h2>
-            <p style="margin-bottom: 1.5rem; opacity: 0.75; font-size: 0.95rem;">Join CleanFlow to manage your cleaning schedules.</p>
+            <h2 style="margin-bottom: 0.35rem; font-size: 1.35rem; text-align: center;">Create an Account</h2>
+            <p style="margin-bottom: 1.5rem; opacity: 0.75; font-size: 0.95rem; text-align: center;">Join CleanFlow to manage your cleaning schedules.</p>
 
             <form action="login.html" method="get">
                 <div class="form-group">

@@ -39,6 +39,11 @@
 
         [dir="rtl"] .split-hero .hero-content {
             text-align: right;
+            direction: ltr;
+        }
+
+        [dir="rtl"] .split-hero .hero-btns {
+            justify-content: flex-end !important;
         }
 
         .split-hero .hero-image img {
@@ -149,6 +154,7 @@
             .split-hero {
                 grid-template-columns: 1fr;
                 text-align: center;
+                padding: 40px 5%;
             }
 
             .split-hero .hero-content {
@@ -164,11 +170,21 @@
             .why-hydro {
                 grid-template-columns: 1fr;
             }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
             .why-hydro-images {
                 grid-template-rows: 160px 160px;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>

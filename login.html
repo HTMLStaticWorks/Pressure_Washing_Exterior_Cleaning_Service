@@ -55,6 +55,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            direction: ltr !important;
         }
         .form-group {
             text-align: left;
@@ -162,8 +163,13 @@
         .auth-footer a {
             color: var(--primary);
             font-weight: 600;
+            transition: var(--transition);
         }
         [data-theme="dark"] .auth-footer a { color: var(--secondary); }
+        .auth-footer a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
         .forgot-password-link {
             color: var(--primary);
             font-weight: 600;
@@ -175,6 +181,28 @@
         .forgot-password-link:hover {
             text-decoration: underline;
             opacity: 0.8;
+        }
+        .auth-card .btn {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 480px) {
+            .auth-card {
+                padding: 30px 20px 24px;
+            }
+            .auth-options {
+                flex-wrap: nowrap !important;
+                font-size: 0.75rem !important;
+                gap: 4px;
+            }
+            .auth-options label,
+            .auth-options a {
+                font-size: 0.75rem !important;
+                white-space: nowrap !important;
+            }
         }
     </style>
 </head>
@@ -203,6 +231,9 @@
                   <text x="42" y="36" font-family="'Poppins', sans-serif" font-weight="500" font-size="9" fill="var(--secondary)" letter-spacing="0.5">EXTERIOR SOLUTIONS</text>
                 </svg>
             </a>
+
+            <h2 style="margin-bottom: 0.35rem; font-size: 1.35rem; text-align: center;">Login</h2>
+            <p style="margin-bottom: 1.5rem; opacity: 0.75; font-size: 0.95rem; text-align: center;">Login to your account to manage your cleaning schedules.</p>
 
             <form action="index.html">
                 <div class="form-group">
