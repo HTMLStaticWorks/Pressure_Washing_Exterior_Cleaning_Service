@@ -56,13 +56,13 @@
                 <li><a href="products.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
 
-            <a href="login.html" class="icon-btn" title="Profile">
-                <i class="fas fa-user"></i>
-            </a>
+            <a href="login.html" class="btn btn-secondary btn-nav-cta">Login</a>
+            <a href="contact.html" class="btn btn-primary btn-nav-cta">Book Now</a>
             <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -77,7 +77,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1600&q=80');">
+        <section class="hero" style="background-image: url('assets/images/hero_pressure_wash.png');">
             <div class="hero-content">
                 <h1 class="text-center">Bring Back the Original Beauty of Your Property</h1>
                 <p class="text-center">Professional pressure washing and exterior cleaning services that instantly improve curb appeal and protect your investment.</p>
@@ -86,19 +86,7 @@
                     <a href="products.html" class="btn btn-secondary">View Services</a>
                 </div>
 
-                <!-- Interactive Before/After Visual Comparison -->
-                <div class="ba-slider">
-                    <!-- Before Image (Dirty) -->
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Dirty Driveway (Before)">
-                    
-                    <!-- After Image (Clean) -->
-                    <div class="resize">
-                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80" alt="Clean Driveway (After)">
-                    </div>
-                    
-                    <span class="handle"></span>
-                    <input type="range" min="0" max="100" value="50" aria-label="Before/After image slider">
-                </div>
+
             </div>
         </section>
 
@@ -209,9 +197,9 @@
                     <!-- Transformation 1 -->
                     <div class="card">
                         <div class="ba-slider" style="margin: 0; height: 260px; max-width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c?auto=format&fit=crop&w=600&q=80" alt="Driveway Before">
+                            <img src="https://pro-blasting.com/wp-content/uploads/2024/03/PRO-BLAST-Blast-BEFOREBEFOREBEFOREBEFOREBEFOREDRIVEWAYDRIVEWAYDROVEWAY-scaled.jpg" alt="Driveway Before">
                             <div class="resize">
-                                <img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=600&q=80" alt="Driveway After">
+                                <img src="https://pro-blasting.com/wp-content/uploads/2024/03/PRO-BLAST-Blast-BEFOREBEFOREBEFOREBEFOREBEFOREDRIVEWAYDRIVEWAYDROVEWAY-scaled.jpg" alt="Driveway After">
                             </div>
                             <span class="handle"></span>
                             <input type="range" min="0" max="100" value="50" aria-label="Driveway slider">
@@ -226,7 +214,7 @@
                         <div class="ba-slider" style="margin: 0; height: 260px; max-width: 100%;">
                             <img src="https://perfectpowerwash.com/wp-content/uploads/2020/01/roof-treatment-yellow-house-ws.jpg" alt="Roof Before">
                             <div class="resize">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7OQGXnz-rI0XmkBsjZAIUl1uQYlmkUZGgCwf38Bef2Xn-8-lLaostRqpQ&s=10" alt="Roof After">
+                                <img src="https://perfectpowerwash.com/wp-content/uploads/2020/01/roof-treatment-yellow-house-ws.jpg" alt="Roof After">
                             </div>
                             <span class="handle"></span>
                             <input type="range" min="0" max="100" value="50" aria-label="Roof slider">
@@ -241,7 +229,7 @@
                         <div class="ba-slider" style="margin: 0; height: 260px; max-width: 100%;">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSVdDAktRQeVD9DDhGj5UHid_dWLskRht2ETnSefIWxbg4OZf2YG2G-jc&s=10" alt="Deck Before">
                             <div class="resize">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz9hZIovzAOKZMpJyx-qhwstrDLZI9rtBWB3CS7NdPV_HxoW3ZSFzXhqU&s=10" alt="Deck After">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSVdDAktRQeVD9DDhGj5UHid_dWLskRht2ETnSefIWxbg4OZf2YG2G-jc&s=10" alt="Deck After">
                             </div>
                             <span class="handle"></span>
                             <input type="range" min="0" max="100" value="50" aria-label="Deck slider">
@@ -268,34 +256,44 @@
                     <!-- Promotion 1 -->
                     <div class="card">
                         <div class="card-content" style="text-align: center;">
-                            <i class="fas fa-sun fa-3x" style="color: var(--accent); margin-bottom: 15px;"></i>
-                            <span style="background-color: var(--accent); color: var(--text-light); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Limited Time</span>
-                            <h3 style="margin-top: 15px;">Summer Special</h3>
-                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">15% Off House Washing</p>
-                            <p>Clean off spring pollen and dust. Keep your home exterior looking bright all summer long.</p>
-                            <a href="contact.html" class="btn btn-primary" style="margin-top: auto;">Claim Offer</a>
+                            <span style="color: var(--accent); font-weight: 550; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px; justify-content: center; margin-bottom: 10px;">
+                                <i class="fas fa-sun"></i> Limited Time
+                            </span>
+                            <h3>Summer Special</h3>
+                            <div style="font-size: 1.75rem; font-weight: 600; color: var(--accent); margin: 15px 0;">
+                                15% Off <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">House Washing</span>
+                            </div>
+                            <p style="margin-bottom: 20px;">Clean off spring pollen and dust. Keep your home exterior looking bright all summer long.</p>
+                            <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Claim Offer</a>
                         </div>
                     </div>
                     <!-- Promotion 2 -->
-                    <div class="card">
-                        <div class="card-content" style="text-align: center;">
-                            <i class="fas fa-spa fa-3x" style="color: var(--secondary); margin-bottom: 15px;"></i>
-                            <span style="background-color: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Most Popular</span>
-                            <h3 style="margin-top: 15px;">Spring Refresh Package</h3>
-                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">Save $75 Instantly</p>
-                            <p>Combine soft-wash house cleaning with full driveway pressure washing for premium curb appeal.</p>
-                            <a href="contact.html" class="btn btn-primary" style="margin-top: auto;">Claim Offer</a>
+                    <div class="card" style="position: relative; border: 2px solid var(--secondary); box-shadow: 0 12px 40px rgba(var(--secondary-rgb), 0.18); overflow: visible;">
+                        <span class="badge-popular">Most Popular</span>
+                        <div class="card-content" style="text-align: center; padding-top: 2rem;">
+                            <span style="color: var(--secondary); font-weight: 550; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px; justify-content: center; margin-bottom: 10px;">
+                                <i class="fas fa-spa"></i> Seasonal Deal
+                            </span>
+                            <h3>Spring Refresh Package</h3>
+                            <div style="font-size: 1.75rem; font-weight: 600; color: var(--secondary); margin: 15px 0;">
+                                Save $75 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">Instantly</span>
+                            </div>
+                            <p style="margin-bottom: 20px;">Combine soft-wash house cleaning with full driveway pressure washing for premium curb appeal.</p>
+                            <a href="contact.html" class="btn btn-primary" style="margin-top: auto; width: 100%;">Claim Offer</a>
                         </div>
                     </div>
                     <!-- Promotion 3 -->
                     <div class="card">
                         <div class="card-content" style="text-align: center;">
-                            <i class="fas fa-boxes-packing fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
-                            <span style="background-color: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Best Value</span>
-                            <h3 style="margin-top: 15px;">Bundle Discounts</h3>
-                            <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">Up to 20% Off</p>
-                            <p>Book House, Roof, and Deck cleaning together. Keep your entire exterior protected and clean.</p>
-                            <a href="contact.html" class="btn btn-primary" style="margin-top: auto;">Claim Offer</a>
+                            <span style="color: var(--primary); font-weight: 550; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px; justify-content: center; margin-bottom: 10px;">
+                                <i class="fas fa-boxes-packing"></i> Best Value
+                            </span>
+                            <h3>Bundle Discounts</h3>
+                            <div style="font-size: 1.75rem; font-weight: 600; color: var(--primary); margin: 15px 0;">
+                                Up to 20% Off <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">Multi-Service</span>
+                            </div>
+                            <p style="margin-bottom: 20px;">Book House, Roof, and Deck cleaning together. Keep your entire exterior protected and clean.</p>
+                            <a href="contact.html" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Claim Offer</a>
                         </div>
                     </div>
                 </div>
@@ -313,7 +311,7 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                             <p>"The team washed our concrete driveway and vinyl fence. The results are amazing! Years of mold and grime disappeared in hours."</p>
-                            <div style="margin-top: auto; padding-top: 20px; font-weight: 700;">- Sarah Jenkins</div>
+                            <div style="margin-top: auto; padding-top: 20px; font-weight: 550;">- Sarah Jenkins</div>
                         </div>
                     </article>
                     <article class="card">
@@ -322,7 +320,7 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                             <p>"CleanFlow soft-washed my shingle roof. Highly recommend their services — they were extremely careful around our flower gardens."</p>
-                            <div style="margin-top: auto; padding-top: 20px; font-weight: 700;">- Michael Rivera</div>
+                            <div style="margin-top: auto; padding-top: 20px; font-weight: 550;">- Michael Rivera</div>
                         </div>
                     </article>
                     <article class="card">
@@ -331,7 +329,7 @@
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                             <p>"Excellent commercial building washing service. The facade looks pristine and our clients noticed the difference immediately."</p>
-                            <div style="margin-top: auto; padding-top: 20px; font-weight: 700;">- Elena Turner</div>
+                            <div style="margin-top: auto; padding-top: 20px; font-weight: 550;">- Elena Turner</div>
                         </div>
                     </article>
                 </div>

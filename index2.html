@@ -18,13 +18,58 @@
         })();
     </script>
     <style>
+        :root {
+            --secondary-text: #007A6B; /* High-contrast teal for light theme (WCAG AA compliant) */
+            --primary-text: #085ECC;   /* High-contrast blue for light theme (WCAG AA compliant) */
+        }
+
+        [data-theme="dark"] {
+            --secondary-text: var(--secondary);
+            --primary-text: var(--primary-light);
+        }
+
+        /* High-contrast overrides for buttons in light mode */
+        [data-theme="light"] .btn-primary {
+            background-color: var(--primary-text) !important;
+            color: white !important;
+        }
+
+        [data-theme="light"] .btn-primary:hover {
+            background-color: var(--primary) !important;
+            box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+        }
+
+        [data-theme="light"] .btn-secondary {
+            border-color: var(--primary-text) !important;
+            color: var(--primary-text) !important;
+        }
+
+        [data-theme="light"] .btn-secondary:hover {
+            background-color: var(--primary-text) !important;
+            color: white !important;
+        }
+
+        /* High-contrast overrides for navigation active and hover states in light mode */
+        [data-theme="light"] nav ul li a[aria-current="page"],
+        [data-theme="light"] nav ul li a.active-link {
+            color: var(--primary-text) !important;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            [data-theme="light"] nav ul li a:hover {
+                color: var(--secondary-text) !important;
+            }
+        }
+
         .split-hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
             min-height: 90vh;
-            padding: 0 5%;
+            padding: 40px 5%;
             gap: 50px;
+            background: radial-gradient(circle at 10% 20%, rgba(var(--secondary-rgb), 0.06) 0%, transparent 50%), radial-gradient(circle at 90% 80%, rgba(var(--primary-rgb), 0.06) 0%, transparent 50%);
+            position: relative;
         }
 
         .split-hero::before {
@@ -59,16 +104,22 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             text-align: center;
-            background: var(--primary);
+            background: #0F172A; /* Dark slate background for high contrast */
+            border: 1px solid var(--border);
             color: white;
             padding: 60px 5%;
             border-radius: var(--radius);
         }
 
         .stat-item h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            color: var(--secondary);
+            color: var(--secondary); /* High contrast teal on dark background */
+        }
+
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.9); /* High contrast text */
+            margin: 0;
         }
 
         .why-hydro {
@@ -100,7 +151,7 @@
         }
 
         .why-hydro-content h2 {
-            font-size: 2rem;
+            font-size: 1.7rem;
             margin-bottom: 12px;
             color: var(--text);
         }
@@ -138,7 +189,7 @@
 
         .why-feature-body h4 {
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 4px;
             color: var(--text);
         }
@@ -213,13 +264,13 @@
                 <li><a href="products.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
 
-            <a href="login.html" class="icon-btn" title="Profile">
-                <i class="fas fa-user"></i>
-            </a>
+            <a href="login.html" class="btn btn-secondary btn-nav-cta">Login</a>
+            <a href="contact.html" class="btn btn-primary btn-nav-cta">Book Now</a>
             <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -236,15 +287,30 @@
         <!-- Premium Split Hero -->
         <section class="split-hero">
             <div class="hero-content">
-                <h1>Restore. Protect. <span style="color: var(--secondary);">Impress.</span></h1>
-                <p>Advanced hot-water pressure washing and soft washing systems designed for maximum cleaning efficiency. Bring back the original shine of your home or business.</p>
-                <div class="hero-btns" style="justify-content: flex-start;">
+                <span style="background: rgba(var(--secondary-rgb), 0.1); color: var(--secondary); padding: 6px 16px; border-radius: 99px; font-size: 0.85rem; font-weight: 550; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; border: 1px solid rgba(var(--secondary-rgb), 0.15);">
+                    <i class="fas fa-star"></i> #1 Rated Exterior Cleaning
+                </span>
+                <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px;">Restore. Protect. <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Impress.</span></h1>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;">Advanced hot-water pressure washing and soft washing systems designed for maximum cleaning efficiency. Bring back the original shine of your home or business.</p>
+                <div class="hero-btns" style="justify-content: flex-start; gap: 15px;">
                     <a href="contact.html" class="btn btn-primary">Get Free Estimate</a>
                     <a href="#see-it-in-action" class="btn btn-secondary">See It In Action</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Beautiful Clean House">
+            <div class="hero-image" style="position: relative; display: inline-block; width: 100%;">
+                <div style="position: absolute; top: 20px; right: 20px; background: var(--card); border: 1px solid var(--border); padding: 10px 15px; border-radius: 8px; font-weight: 600; font-size: 0.8rem; display: flex; align-items: center; gap: 6px; box-shadow: var(--shadow); z-index: 10; color: var(--text);">
+                    <i class="fas fa-shield-halved" style="color: var(--primary);"></i> Fully Licensed &amp; Insured
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpGP6d_jegUqjROfRWrnVMfExUFexHuHx6Ws4mKBDg0v2b6pL9zCQEv0M&s=10" alt="Technician soft washing vinyl house siding" style="width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow);">
+                <div style="position: absolute; bottom: 20px; left: 20px; background: var(--card); border: 1px solid var(--border); padding: 15px 20px; border-radius: 12px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow); z-index: 10;">
+                    <div style="background: var(--secondary); color: var(--bg-dark); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div style="text-align: left;">
+                        <div style="font-weight: 600; color: var(--text); font-size: 0.9rem;">100% Satisfaction</div>
+                        <div style="color: var(--text-muted); font-size: 0.75rem;">Guaranteed Quality</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -278,14 +344,14 @@
                 <div class="why-hydro">
                     <!-- Mosaic Image Grid -->
                     <div class="why-hydro-images">
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Pressure Washing Splashing" loading="lazy">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpA3LreucesbEZwGuEQc9kQLjDcYGOXrJyvlcKE0qVc632FiELBTgZKLw&s=10" alt="Pressure Washing Splashing" loading="lazy">
                         <img src="https://t3.ftcdn.net/jpg/03/94/60/36/360_F_394603682_5aeyxbj9FBPt7JFVnVKXHDfnkYQnyogt.jpg" alt="Roof Cleaning Shingles" loading="lazy">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2bFCsnkIsKC_ceHyPe3St2vJEwPwI2PB52cbRWwZg7YDVGpmFcGVAWI&s=10" alt="Deck Washing wood restoration" loading="lazy">
                     </div>
 
                     <!-- Feature List -->
                     <div class="why-hydro-content">
-                        <h2>Why <span style="color: var(--secondary);">Soft Washing?</span></h2>
+                        <h2>Why <span style="color: var(--secondary-text);">Soft Washing?</span></h2>
                         <p class="section-lead">Soft washing isn't just low pressure — it's a smarter, safer, and longer-lasting way to clean delicate siding and shingle roofs. Here's why thousands of homeowners trust it.</p>
 
                         <div class="why-feature-list">
@@ -337,10 +403,10 @@
                 <div class="card-grid card-grid--three">
                     <!-- Product 1 -->
                     <div class="card">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="House Washing">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY4vLugIvY1lSkz-YfbvPi_k4IozQq5mYrmZn1cSC76QbFMgSpHwpOUmc&s=10" alt="House Washing">
                         <div class="card-content">
                             <h3>Full House Soft Wash</h3>
-                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">From $299.00</p>
+                            <p style="color: var(--secondary-text); font-weight: 550; font-size: 1.2rem;">From $299.00</p>
                             <p>Low-pressure wash for vinyl, siding, stucco, brick or wood. Removes organic grime safely.</p>
                             <div class="product-card-actions">
                                 <a href="products.html" class="btn btn-primary">Book Package</a>
@@ -352,7 +418,7 @@
                         <img src="https://wilkinsenterprises.info/img/IMG_0561.jpg" alt="Roof Wash">
                         <div class="card-content">
                             <h3>Non-Pressure Roof Wash</h3>
-                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">From $399.00</p>
+                            <p style="color: var(--secondary-text); font-weight: 550; font-size: 1.2rem;">From $399.00</p>
                             <p>Safe shingle soft washing removes black stains, mold, lichen, and restores shingle colors.</p>
                             <div class="product-card-actions">
                                 <a href="products.html" class="btn btn-primary">Book Package</a>
@@ -361,10 +427,10 @@
                     </div>
                     <!-- Product 3 -->
                     <div class="card">
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Driveway Wash">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHkovGlsL2bMhVNCF3yVU3aXI07K9nroicCVWVRvRfL4usluNOBACuHo&s=10" alt="Driveway Wash">
                         <div class="card-content">
                             <h3>Driveway &amp; Sidewalk Blast</h3>
-                            <p style="color: var(--secondary); font-weight: 700; font-size: 1.2rem;">From $149.00</p>
+                            <p style="color: var(--secondary-text); font-weight: 550; font-size: 1.2rem;">From $149.00</p>
                             <p>High-pressure rotary concrete cleaning with post-treatment protection to keep it white.</p>
                             <div class="product-card-actions">
                                 <a href="products.html" class="btn btn-primary">Book Package</a>
@@ -381,7 +447,7 @@
                 <h2 class="section-title">See Our Crew in Action</h2>
                 <div class="video-poster-tile">
                     <img class="video-poster-img"
-                        src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&h=500"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdu5L1G98wbM7kHY4g40S93BaAnkpPKPMr4y_CD9gFqT3mYP_tUTnVe6Vt&s=10"
                         alt="Driveway Cleaning Preview" width="900" height="500" loading="lazy">
                     <button type="button" class="video-poster-play" aria-label="Play video: How Soft Washing Works">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

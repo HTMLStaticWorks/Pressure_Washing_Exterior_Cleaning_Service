@@ -2,9 +2,12 @@
 
 :root {
     --primary: #0A84FF;
+    --primary-rgb: 10, 132, 255;
     --primary-light: #47A1FF;
     --secondary: #00C2A8;
+    --secondary-rgb: 0, 194, 168;
     --accent: #F59E0B;
+    --accent-rgb: 245, 158, 11;
     --bg-light: #F8FAFC;
     --bg-alt-light: #F1F5F9;
     --text-light: #0F172A;
@@ -93,29 +96,30 @@ section {
 }
 
 /* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
 h1 {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-    font-weight: 560; /* Weight max 580 */
+    font-size: clamp(2.2rem, 8vw, 4.2rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: clamp(2.2rem, 6vw, 3.8rem);
-    font-weight: 530; /* Weight max 540 */
+    font-size: clamp(1.8rem, 5.5vw, 2.8rem);
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    font-weight: 510; /* Weight max 520 */
+    font-size: clamp(1.3rem, 3.5vw, 1.85rem);
     line-height: 1.3;
     margin-bottom: 1.5rem;
 }
 
 h4 {
-    font-weight: 500;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
     margin-bottom: 1rem;
 }
 
@@ -139,7 +143,7 @@ p, li, span, a, label, input, select, textarea {
     justify-content: center;
     padding: 12px 28px;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 550;
     cursor: pointer;
     transition: var(--transition);
     border: none;
@@ -155,7 +159,7 @@ p, li, span, a, label, input, select, textarea {
 .btn-primary:hover {
     background-color: var(--primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(20, 83, 45, 0.3);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
 }
 
 .btn-secondary {
@@ -182,7 +186,7 @@ p, li, span, a, label, input, select, textarea {
 
 /*
  * Secondary outline on dark surfaces (hero overlay, primary CTA bands, etc.).
- * Default .btn-secondary uses --primary green; that fails on dark green/black backdrops.
+ * Default .btn-secondary uses --primary blue; that fails on dark blue/black backdrops.
  */
 .hero .btn-secondary,
 .section-cta-band .btn-secondary,
@@ -218,7 +222,7 @@ header {
 }
 
 [data-theme="dark"] header {
-    background-color: rgba(11, 31, 26, 0.8);
+    background-color: rgba(15, 23, 42, 0.8);
 }
 
 .logo {
@@ -226,7 +230,7 @@ header {
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 550;
     color: var(--primary);
     flex-shrink: 0;
     text-decoration: none;
@@ -259,7 +263,7 @@ nav ul li a {
 nav ul li a[aria-current="page"],
 nav ul li a.active-link {
     color: var(--primary);
-    font-weight: 700;
+    font-weight: 550;
 }
 
 [data-theme="dark"] nav ul li a[aria-current="page"],
@@ -453,7 +457,7 @@ html[data-theme="dark"] .theme-toggle-btn .theme-icon-sun {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Products: Pro Grow Tower — primary green on dark bg-alt fails contrast in dark mode */
+/* Products: Pro Grow Tower — primary blue on dark bg-alt fails contrast in dark mode */
 #featured-product .featured-price-current {
     color: var(--primary);
 }
@@ -464,7 +468,7 @@ html[data-theme="dark"] .theme-toggle-btn .theme-icon-sun {
 
 #featured-product .featured-price-was {
     color: var(--text-muted);
-    font-weight: 600;
+    font-weight: 550;
 }
 
 [data-theme="dark"] #featured-product .featured-price-was {
@@ -502,7 +506,7 @@ html[data-theme="dark"] .theme-toggle-btn .theme-icon-sun {
     justify-content: center;
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
-    font-weight: 700;
+    font-weight: 550;
     font-size: 0.8rem;
     letter-spacing: 0.02em;
     color: #fff;
@@ -602,7 +606,7 @@ html[data-theme="dark"] .theme-toggle-btn .theme-icon-sun {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
 }
@@ -751,7 +755,7 @@ footer {
 
 /* Light theme footer overrides */
 [data-theme="light"] footer {
-    background-color: #F1F5F1;
+    background-color: var(--bg-alt-light);
     color: var(--text-light);
 }
 
@@ -773,7 +777,7 @@ footer {
 }
 
 [data-theme="light"] .footer-social-link {
-    border-color: rgba(20, 83, 45, 0.3);
+    border-color: rgba(var(--primary-rgb), 0.3);
     color: var(--primary);
 }
 
@@ -797,8 +801,8 @@ footer {
 
 .footer-column h4 {
     margin-bottom: 1.5rem;
-    color: #bbf7d0;
-    font-weight: 700;
+    color: var(--secondary);
+    font-weight: 600;
 }
 
 
@@ -932,7 +936,7 @@ footer .footer-column p i {
     height: 18px;
     padding: 0 4px;
     font-size: 0.65rem;
-    font-weight: 700;
+    font-weight: 550;
     line-height: 18px;
     text-align: center;
     border-radius: 9px;
@@ -948,7 +952,7 @@ footer .footer-column p i {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -1021,7 +1025,7 @@ footer .footer-column p i {
 
 .pricing-card.popular {
     border-color: var(--secondary);
-    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.18);
+    box-shadow: 0 12px 40px rgba(var(--secondary-rgb), 0.18);
 }
 
 .badge-popular {
@@ -1032,7 +1036,7 @@ footer .footer-column p i {
     background: var(--secondary);
     color: var(--bg-dark);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 550;
     padding: 6px 16px;
     border-radius: 999px;
     white-space: nowrap;
@@ -1044,7 +1048,7 @@ footer .footer-column p i {
 
 .pricing-price {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 550;
     color: var(--primary);
     margin-bottom: 0.25rem;
 }
@@ -1162,7 +1166,7 @@ footer .footer-column p i {
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.0rem;
     }
 
     .hero-btns {
@@ -1224,7 +1228,8 @@ footer .footer-column p i {
     /* Hide all nav-action items EXCEPT the hamburger button */
     header > .nav-actions > .icon-btn:not(#menu-toggle),
     header > .nav-actions > a.icon-btn,
-    header > .nav-actions > button.icon-btn {
+    header > .nav-actions > button.icon-btn,
+    header > .nav-actions > .btn-nav-cta {
         display: none !important;
     }
 
@@ -1321,7 +1326,7 @@ footer .footer-column p i {
         font-weight: 600;
         padding: 16px 18px;
         border-radius: 14px;
-        background: rgba(var(--primary-rgb, 20, 83, 45), 0.08);
+        background: rgba(var(--primary-rgb, 10, 132, 255), 0.08);
         color: var(--text);
         display: flex;
         align-items: center;
@@ -1638,7 +1643,7 @@ footer .footer-column p i {
 
 .faq-item summary {
     padding: 20px;
-    font-weight: 600;
+    font-weight: 550;
     cursor: pointer;
     list-style: none;
     display: flex;
@@ -1685,7 +1690,7 @@ footer .footer-column p i {
     background: var(--primary);
     color: white;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 550;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1727,6 +1732,16 @@ footer .footer-column p i {
         width: 100%;
         max-width: 280px;
         text-align: center;
+    }
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .mobile-only {
+        display: block !important;
     }
 }
 
